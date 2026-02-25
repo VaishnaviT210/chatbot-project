@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Chatbot</title>
+</head>
+<body>
+
+<h3>Hiiii {{name}} 👋</h3>
+
+<form method="POST">
+    <input type="text" name="message" placeholder="Ask something..." required>
+    <input type="submit" value="Send">
+</form>
+
+<hr>
+
+{% for user_msg, bot_msg in history %}
+    <p><b>You:</b> {{ user_msg }}</p>
+    <p><b>Bot:</b> {{ bot_msg }}</p>
+    <hr>
+{% endfor %}
+
+<a href="/logout">Logout</a>
+
+</body>
+</html> 
